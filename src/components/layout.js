@@ -12,7 +12,10 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 
+export const ThemeContext = React.createContext('day')
+
 const Layout = ({ children }) => {
+  
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
