@@ -3,13 +3,12 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import SunIcon from '../assets/sun.inline.svg'
-import MoonIcon from '../assets/moon.inline.svg'
+import SnowIcon from '../assets/snow.inline.svg'
 
 const Header = ({ siteTitle }) => {
-  const theme = React.useContext(ThemeContext)
-
+  
   const toggleTheme = () => {
-    theme === nightSkin ? setTheme('night') : setTheme('day')
+    theme === winter ? setTheme('winter') : setTheme('summer')
   }
   
   return (
@@ -45,7 +44,7 @@ const Header = ({ siteTitle }) => {
           />
         </div>
         <div>
-          <MoonIcon className="theme-icon"
+          <SnowIcon className="theme-icon"
                     onClick={() => {
                       toggleTheme()
                     }}
